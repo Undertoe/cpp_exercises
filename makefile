@@ -9,7 +9,7 @@ help:
 
 
 clean: 
-	rm -rf build
+	rm -rf build build_test;
 
 build:
-	mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo; make
+	mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo; make; cp ../ModernCPPChallenge/runTests.sh ./ModernCPPChallenge; cd ModernCPPChallenge/; ./runTests.sh
